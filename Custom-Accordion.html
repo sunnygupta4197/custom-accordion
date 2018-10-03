@@ -35,10 +35,10 @@ color: #f00f00;
 
 <div class="container">
 	<div class="container-fluid">
-		<div class="card">
-			<div class="card-head">
+		<div class="card my-accordion">
+			<div class="card-head open">
 				<div class="row">
-					<div class=" open col-sm-12">
+					<div class="col-sm-12">
 						<div class="card-title">
 							<p>Click on Card to Open</p>
 						</div>
@@ -56,7 +56,7 @@ color: #f00f00;
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">	
 $(document).on('click', '.open', function(){
-	$(this).parents('.card').siblings().find('.card').slideUp();
+	//$(this).parents('.card').siblings().find('.card').slideUp(); //for more than one accordion (if one card is open then other cards will automatically close)
 	$(this).parents('.card-head').next().slideToggle();
 });
 </script>
